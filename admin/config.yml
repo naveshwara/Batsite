@@ -12,8 +12,8 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: https://zesty-llama-277811.netlify.app
-display_url: https://zesty-llama-277811.netlify.app
+site_url: https://thebatsite.netlify.app
+display_url: https://thebatsite.netlify.app
 
 collections:
   - name: "site"
