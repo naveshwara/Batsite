@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO              # FROM DECAPBRIDGE
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID   # FROM DECAPBRIDGE
+  gateway_url: https://gateway.decapbridge.com      # FROM DECAPBRIDGE
+  commit_messages:
+    create: 'Add {{collection}} "{{slug}}" — {{author-name}} via dashboard'
+    update: 'Update {{collection}} "{{slug}}" — {{author-name}} via dashboard'
+    delete: 'Remove {{collection}} "{{slug}}" — {{author-name}} via dashboard'
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://YOURDOMAIN.com
+display_url: https://YOURDOMAIN.com
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "works"
+        label: "Videos"
+        file: "content.json"
+        description: "Add, edit, reorder (drag the handle), or delete the videos on your site. Hit Publish — the site updates in about a minute."
+        fields:
+          - name: "works"
+            label: "Videos"
+            label_singular: "Video"
+            widget: "list"
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields:
+              - { name: "title",    label: "Title (headline under the card)", widget: "string" }
+              - { name: "drive",    label: "Google Drive File ID", widget: "string", required: false, hint: "Code between /d/ and /view in the Drive link. Blank if YouTube." }
+              - { name: "yt",       label: "YouTube Video ID", widget: "string", required: false, hint: "Code after watch?v= or youtu.be/. Blank if Drive." }
+              - { name: "filter",   label: "Category tab", widget: "select", options: ["music","cinematic","commercial","events"], default: "cinematic" }
+              - { name: "cat",      label: "Small category line", widget: "string", required: false }
+              - { name: "chip",     label: "Corner tag", widget: "string", required: false }
+              - { name: "big",      label: "Big word on thumbnail", widget: "string", required: false }
+              - { name: "sub",      label: "Small line under big word", widget: "string", required: false }
+              - { name: "featured", label: "Featured (big wide card)", widget: "boolean", default: false }
+              - { name: "footCat",  label: "Footer category override", widget: "string", required: false }
+              - { name: "grad",     label: "Thumbnail background (advanced)", widget: "string", required: false }
+      - name: "settings"
+        label: "Site Settings"
+        file: "settings.json"
+        description: "Your contact details, social links, and share image."
+        fields:
+          - { name: "email",     label: "Email", widget: "string", required: false }
+          - { name: "phone",     label: "Phone (shown on site)", widget: "string", required: false }
+          - { name: "phoneHref", label: "Phone dial code (e.g. +918072253477)", widget: "string", required: false }
+          - { name: "whatsapp",  label: "WhatsApp number (e.g. 918072253477)", widget: "string", required: false }
+          - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
+          - { name: "youtube",   label: "YouTube channel URL", widget: "string", required: false }
+          - { name: "ogImage",   label: "Share image URL (1200x630)", widget: "string", required: false }
