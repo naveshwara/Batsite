@@ -11,20 +11,22 @@ window.SITE_WORKS = [
     "big": "THALA",
     "sub": "MS Dhoni Tribute",
     "featured": true,
-    "grad": "linear-gradient(135deg,#3a1010 0%,#6a1815 45%,#1a0808 100%)"
+    "grad": "linear-gradient(135deg,#3a1010 0%,#6a1815 45%,#1a0808 100%)",
+    "thumb": "assets/thumbs/yt_GrlAr6Dxfkc.jpg"
   },
   {
     "title": "Independence Day — A Nation in Frames",
     "drive": "1afChECBWrDekeX8ay-R1LsMdbz3x7qXC",
     "yt": "",
-    "filter": "cinematic",
+    "filter": "music",
     "cat": "Cinematic · Patriotic Film",
     "chip": "Patriotic",
     "big": "INDIA",
     "sub": "A Patriotic Film",
     "featured": false,
     "footCat": "Cinematic · Patriotic",
-    "grad": "linear-gradient(135deg,#3a1810 0%,#5a2010 45%,#1a0808 100%)"
+    "grad": "linear-gradient(135deg,#3a1810 0%,#5a2010 45%,#1a0808 100%)",
+    "thumb": "assets/thumbs/dr_1afChECBWrDekeX8ay-R1LsMdbz3x7qXC.jpg"
   },
   {
     "title": "Peace Song — A Quiet Anthem",
@@ -36,7 +38,8 @@ window.SITE_WORKS = [
     "big": "PEACE",
     "sub": "An Original Song",
     "featured": false,
-    "grad": "linear-gradient(135deg,#1a0a08 0%,#2a1812 55%,#3a2418 100%)"
+    "grad": "linear-gradient(135deg,#1a0a08 0%,#2a1812 55%,#3a2418 100%)",
+    "thumb": "assets/thumbs/dr_1c_F5eq2TOoUgn4m07Di6JjVgUgMnyL44.jpg"
   },
   {
     "title": "Chetan Bhagat — Stories That Shaped Young Minds",
@@ -49,7 +52,8 @@ window.SITE_WORKS = [
     "sub": "A Portrait in Motion",
     "featured": false,
     "footCat": "Portrait Film · Velammal Nexus",
-    "grad": "linear-gradient(135deg,#0a0a18 0%,#181028 55%,#241838 100%)"
+    "grad": "linear-gradient(135deg,#0a0a18 0%,#181028 55%,#241838 100%)",
+    "thumb": "assets/thumbs/yt_36Dbik_VC3A.jpg"
   },
   {
     "title": "Velammal Nexus — The Brand Film",
@@ -61,7 +65,8 @@ window.SITE_WORKS = [
     "big": "NEXUS",
     "sub": "The Brand Film",
     "featured": false,
-    "grad": "linear-gradient(135deg,#1a0030 0%,#3d0068 45%,#1a0820 100%)"
+    "grad": "linear-gradient(135deg,#1a0030 0%,#3d0068 45%,#1a0820 100%)",
+    "thumb": "assets/thumbs/dr_12fq7UnKFztxk4ZXY-r7njkAISXnL_fQO.jpg"
   },
   {
     "title": "Velammal Nexus — Full Cut",
@@ -74,7 +79,8 @@ window.SITE_WORKS = [
     "sub": "4K Brand Film",
     "featured": true,
     "footCat": "Brand Film · Long Form",
-    "grad": "linear-gradient(135deg,#180020 0%,#2a0040 55%,#3d1060 100%)"
+    "grad": "linear-gradient(135deg,#180020 0%,#2a0040 55%,#3d1060 100%)",
+    "thumb": "assets/thumbs/dr_1htMaDUwvTNMvRGvzGB_JpRcwB_E8kbAk.jpg"
   },
   {
     "title": "Ashish — Against the Sky · The Everest Summit",
@@ -87,46 +93,89 @@ window.SITE_WORKS = [
     "sub": "A Documentary Film",
     "featured": false,
     "footCat": "Documentary · Velammal Nexus",
-    "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)"
+    "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)",
+    "thumb": "assets/thumbs/yt_xnTyn_zb67s.jpg"
+  },
+  {
+    "title": "Arietta",
+    "drive": "",
+    "yt": "0loeMKVqpwk",
+    "filter": "cinematic",
+    "cat": "Experimental Film",
+    "chip": "Experimental",
+    "big": "ARIETTA",
+    "sub": "Experimental Film",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#0a0a18 0%,#181028 55%,#241838 100%)",
+    "thumb": "assets/thumbs/yt_0loeMKVqpwk.jpg"
+  },
+  {
+    "title": "Smoke and Mirrors",
+    "drive": "",
+    "yt": "IkalpFCCx6U",
+    "filter": "cinematic",
+    "cat": "Short Film",
+    "chip": "Short Film",
+    "big": "SMOKE",
+    "sub": "Short Film",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#0c0c10 0%,#1a1a20 55%,#26262e 100%)",
+    "thumb": "assets/thumbs/yt_IkalpFCCx6U.jpg"
+  },
+  {
+    "title": "The Fools Day Killer",
+    "drive": "",
+    "yt": "13oIIJrE-T8",
+    "filter": "cinematic",
+    "cat": "Short Film · Thriller",
+    "chip": "Thriller",
+    "big": "KILLER",
+    "sub": "Short Film · Thriller",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#180808 0%,#2a0e0e 55%,#3a1414 100%)",
+    "thumb": "assets/thumbs/yt_13oIIJrE-T8.jpg"
   },
   {
     "title": "Gukesh — The King of Chess",
     "drive": "",
     "yt": "x_3rUuYJ-BQ",
-    "filter": "music",
+    "filter": "cinematic",
     "cat": "Sports AV · Tribute",
     "chip": "Sports AV",
     "big": "GUKESH",
     "sub": "World Champion",
     "featured": false,
     "footCat": "Sports AV · Velammal Nexus",
-    "grad": "linear-gradient(135deg,#0a0a18 0%,#101028 55%,#181c38 100%)"
+    "grad": "linear-gradient(135deg,#0a0a18 0%,#101028 55%,#181c38 100%)",
+    "thumb": "assets/thumbs/yt_x_3rUuYJ-BQ.jpg"
   },
   {
     "title": "Harmanpreet Kaur — Hitting Boundaries, Breaking Barriers",
     "drive": "",
     "yt": "Cw9BLgVV0-g",
-    "filter": "music",
+    "filter": "cinematic",
     "cat": "Sports AV · Tribute",
     "chip": "Sports AV",
     "big": "HARMAN",
     "sub": "Captain of India",
     "featured": false,
     "footCat": "Sports AV · Velammal Nexus",
-    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)"
+    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)",
+    "thumb": "assets/thumbs/yt_Cw9BLgVV0-g.jpg"
   },
   {
     "title": "Usain Bolt — The Man Who Redefined Speed",
     "drive": "",
     "yt": "xjCtuwqQRUQ",
-    "filter": "music",
+    "filter": "cinematic",
     "cat": "Sports AV · Tribute",
     "chip": "Sports AV",
     "big": "BOLT",
     "sub": "The Sprint",
     "featured": false,
     "footCat": "Sports AV · Velammal Nexus",
-    "grad": "linear-gradient(135deg,#001218 0%,#002040 55%,#003858 100%)"
+    "grad": "linear-gradient(135deg,#001218 0%,#002040 55%,#003858 100%)",
+    "thumb": "assets/thumbs/yt_xjCtuwqQRUQ.jpg"
   },
   {
     "title": "Thirty Seconds, Told in 4K",
@@ -138,7 +187,8 @@ window.SITE_WORKS = [
     "big": ":30",
     "sub": "4K Cinematic Spot",
     "featured": true,
-    "grad": "linear-gradient(135deg,#080814 0%,#100c20 55%,#1c142c 100%)"
+    "grad": "linear-gradient(135deg,#080814 0%,#100c20 55%,#1c142c 100%)",
+    "thumb": "assets/thumbs/dr_1GrNAheRl2PIduBFFNae_KYjB3ox1muKi.jpg"
   },
   {
     "title": "Twenty Seconds, Told in 4K",
@@ -150,7 +200,8 @@ window.SITE_WORKS = [
     "big": ":20",
     "sub": "4K Brand Spot",
     "featured": false,
-    "grad": "linear-gradient(135deg,#0a0a18 0%,#101028 55%,#181c38 100%)"
+    "grad": "linear-gradient(135deg,#0a0a18 0%,#101028 55%,#181c38 100%)",
+    "thumb": "assets/thumbs/dr_1juGrJQHkGThs8YLI7V7XjJsqdOZ0xhJ5.jpg"
   },
   {
     "title": "The Mandate — Election Awareness",
@@ -162,7 +213,8 @@ window.SITE_WORKS = [
     "big": "MANDATE",
     "sub": "Election Awareness",
     "featured": false,
-    "grad": "linear-gradient(135deg,#180a08 0%,#2a1208 55%,#3a1810 100%)"
+    "grad": "linear-gradient(135deg,#180a08 0%,#2a1208 55%,#3a1810 100%)",
+    "thumb": "assets/thumbs/dr_1PzY_zXi-v6En8CUnrgYFt_dvVI2maL0l.jpg"
   },
   {
     "title": "Every Vote Counts — Campaign Film",
@@ -174,7 +226,8 @@ window.SITE_WORKS = [
     "big": "VOTE",
     "sub": "Every Vote Counts",
     "featured": false,
-    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)"
+    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)",
+    "thumb": "assets/thumbs/dr_1NhxXhxfAoTARvNsE5l8t1XE0CX5qCUKY.jpg"
   },
   {
     "title": "Margazhi Utsav — TV Spot",
@@ -186,19 +239,21 @@ window.SITE_WORKS = [
     "big": "UTSAV",
     "sub": "Margazhi · A Festival",
     "featured": false,
-    "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)"
+    "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)",
+    "thumb": "assets/thumbs/dr_1YoFn04xUdwfonBliu_7TZxJRkG62Xozw.jpg"
   },
   {
-    "title": "Many Happy Returns — A Tribute Film",
+    "title": "Birthday Tribute",
     "drive": "1tnLwDxOg7wjp7vUmZlwCLidiR2t5leMY",
     "yt": "",
-    "filter": "events",
-    "cat": "Event · Tribute",
+    "filter": "cinematic",
+    "cat": "Tribute Film",
     "chip": "Tribute",
-    "big": "RETURNS",
-    "sub": "Many Happy",
+    "big": "BIRTHDAY",
+    "sub": "Another candle, properly lit.",
     "featured": false,
-    "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)"
+    "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)",
+    "thumb": "assets/thumbs/dr_1tnLwDxOg7wjp7vUmZlwCLidiR2t5leMY.jpg"
   },
   {
     "title": "Adayalampattu — Campus Walkthrough",
@@ -210,15 +265,16 @@ window.SITE_WORKS = [
     "big": "ADAYALAMPATTU",
     "sub": "Campus Walkthrough",
     "featured": true,
-    "grad": "linear-gradient(135deg,#0a1208 0%,#142a18 55%,#1c3a28 100%)"
+    "grad": "linear-gradient(135deg,#0a1208 0%,#142a18 55%,#1c3a28 100%)",
+    "thumb": "assets/thumbs/dr_1C7C1CL2XBFc_6cnnS_wMMIXWvcF7tM83.jpg"
   }
 ];
 window.SITE_SETTINGS = {
-  "email": "naveshwara@gmail.com",
+  "email": "pnaveshwar@gmail.com",
   "phone": "+91 80722 53477",
   "phoneHref": "+918072253477",
   "whatsapp": "918072253477",
-  "instagram": "",
+  "instagram": "https://www.instagram.com/naveshwar/",
   "youtube": "",
   "ogImage": ""
 };
