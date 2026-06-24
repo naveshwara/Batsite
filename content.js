@@ -3,6 +3,7 @@
 window.SITE_WORKS = [
   {
     "title": "Thala Forever — MS Dhoni Tribute Anthem",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "GrlAr6Dxfkc",
     "filter": "music",
@@ -16,6 +17,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Velammal Nexus — The Brand Film",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "fhO-5EzZ34Q",
     "filter": "commercial",
@@ -29,6 +31,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Nexus — Ad",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "VU-GV6OUHf0",
     "filter": "commercial",
@@ -42,6 +45,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Birthday Tribute",
+    "role": "Edit · Color",
     "drive": "",
     "yt": "ly9NF8KDSw0",
     "filter": "cinematic",
@@ -55,6 +59,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Velammal Nexus — Ad",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "_xq9mt_RV-g",
     "filter": "commercial",
@@ -69,6 +74,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Peace Song — A Quiet Anthem",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "ASyIPON4NWc",
     "filter": "music",
@@ -82,6 +88,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Independence Day — A Nation in Frames",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "zUdEsDqkr8Q",
     "filter": "music",
@@ -96,6 +103,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "The Mandate — Election Awareness",
+    "role": "Direction · Edit",
     "drive": "",
     "yt": "LNM0h3loEes",
     "filter": "commercial",
@@ -109,6 +117,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Every Vote Counts — Campaign Film",
+    "role": "Direction · Edit",
     "drive": "",
     "yt": "DlLLUybt0rs",
     "filter": "commercial",
@@ -122,6 +131,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Chetan Bhagat — Stories That Shaped Young Minds",
+    "role": "DP · Edit",
     "drive": "",
     "yt": "36Dbik_VC3A",
     "filter": "cinematic",
@@ -136,6 +146,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Ashish — Against the Sky · The Everest Summit",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "xnTyn_zb67s",
     "filter": "cinematic",
@@ -150,6 +161,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Gukesh — The King of Chess",
+    "role": "Edit · Color",
     "drive": "",
     "yt": "x_3rUuYJ-BQ",
     "filter": "cinematic",
@@ -164,6 +176,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Harmanpreet Kaur — Hitting Boundaries, Breaking Barriers",
+    "role": "Edit · Color",
     "drive": "",
     "yt": "Cw9BLgVV0-g",
     "filter": "cinematic",
@@ -178,6 +191,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Usain Bolt — The Man Who Redefined Speed",
+    "role": "Edit · Color",
     "drive": "",
     "yt": "xjCtuwqQRUQ",
     "filter": "cinematic",
@@ -192,6 +206,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Margazhi Utsav — TV Spot",
+    "role": "DP · Edit",
     "drive": "",
     "yt": "ufet3cBBHGc",
     "filter": "events",
@@ -205,6 +220,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Adayalampattu — Campus Walkthrough",
+    "role": "DP · Edit · Color",
     "drive": "",
     "yt": "lIH5bpqh8ZA",
     "filter": "events",
@@ -218,6 +234,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "The Fools Day Killer",
+    "role": "Direction · DP · Edit",
     "drive": "",
     "yt": "13oIIJrE-T8",
     "filter": "cinematic",
@@ -231,6 +248,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Arietta",
+    "role": "Direction · DP · Color",
     "drive": "",
     "yt": "0loeMKVqpwk",
     "filter": "cinematic",
@@ -244,6 +262,7 @@ window.SITE_WORKS = [
   },
   {
     "title": "Smoke and Mirrors",
+    "role": "DP · Edit",
     "drive": "",
     "yt": "IkalpFCCx6U",
     "filter": "cinematic",
@@ -263,5 +282,5 @@ window.SITE_SETTINGS = {
   "whatsapp": "918072253477",
   "instagram": "https://www.instagram.com/naveshwar/",
   "youtube": "https://www.youtube.com/@hashtagproductions",
-  "ogImage": ""
+  "ogImage": "https://thebatsite.netlify.app/assets/thumbs/yt_GrlAr6Dxfkc.jpg"
 };

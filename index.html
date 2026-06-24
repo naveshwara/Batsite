@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Naveshwara Pandian P — Filmmaker, Cinematographer, Colorist & AI Advertising Specialist. Cinematic films and brand spots, scaled into Meta, Google & YouTube campaigns that reach millions.">
   <title>Naveshwara Pandian P — Film · Color · AI · Performance Marketing</title>
+  <meta name="author" content="Naveshwara Pandian P">
+  <link rel="canonical" href="https://thebatsite.netlify.app/">
+  <!-- Open Graph / social share card (read by WhatsApp, LinkedIn, Facebook, iMessage) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Naveshwara Pandian P">
+  <meta property="og:title" content="Naveshwara Pandian P — Cinematographer · AI Filmmaker · Colorist">
+  <meta property="og:description" content="Cinematic films and brand spots, scaled into campaigns that reach millions. Ten years behind the lens.">
+  <meta property="og:url" content="https://thebatsite.netlify.app/">
+  <meta property="og:image" content="https://thebatsite.netlify.app/assets/thumbs/yt_GrlAr6Dxfkc.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="Naveshwara Pandian P — film work">
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Naveshwara Pandian P — Cinematographer · AI Filmmaker · Colorist">
+  <meta name="twitter:description" content="Cinematic films and brand spots, scaled into campaigns that reach millions.">
+  <meta name="twitter:image" content="https://thebatsite.netlify.app/assets/thumbs/yt_GrlAr6Dxfkc.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0B'/%3E%3Cg transform='translate(1.5,11) scale(.235)'%3E%3Cpath d='M62 14 L69 2 L66 16 Q92 4 120 6 L106 36 L96 16 L80 40 L70 22 L64 26 L62 44 L60 26 L54 22 L44 40 L28 16 L18 36 L4 6 Q32 4 58 16 L55 2 Z' fill='%23E11D2B'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -470,6 +487,44 @@
     .hero p.hero-desc b {
       color: var(--ink);
       font-weight: 500;
+    }
+    .hero-ai {
+      margin-top: 22px;
+      max-width: 600px;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 14px 17px;
+      border: 1px solid rgba(225,29,43,.30);
+      border-left: 3px solid var(--accent);
+      border-radius: 13px;
+      background: linear-gradient(118deg, rgba(225,29,43,.12), rgba(225,29,43,.02) 62%);
+      box-shadow: 0 0 0 1px rgba(225,29,43,.05), 0 18px 46px -24px rgba(225,29,43,.7);
+    }
+    .hero-ai-tag {
+      flex: 0 0 auto;
+      font-family: var(--f-mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--accent);
+      padding: 5px 9px;
+      border-radius: 100px;
+      margin-top: 1px;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px -4px rgba(225,29,43,.8);
+    }
+    .hero-ai-txt {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .hero-ai-txt strong { color: var(--ink); font-weight: 600; }
+    .hero-ai-txt em { color: var(--accent-soft); font-style: normal; font-weight: 600; }
+    @media (max-width: 540px) {
+      .hero-ai { flex-direction: column; gap: 10px; }
     }
     .cta {
       display: flex; gap: 12px;
@@ -1045,6 +1100,16 @@
       width: 100%; height: 100%;
       border: 0;
     }
+    /* mask YouTube's own title/channel bar at the top of the embed (and swallow
+       its clicks) so playback reads as native to this site, not a YouTube embed */
+    .vmodal-player::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 15%;
+      z-index: 2;
+      background: linear-gradient(to bottom, rgba(8,8,11,.98) 0%, rgba(8,8,11,.6) 42%, rgba(8,8,11,0) 100%);
+    }
     .vmodal-hint {
       text-align: center;
       margin-top: 14px;
@@ -1078,6 +1143,10 @@
     }
     @media (max-width: 880px) {
       .about-inner { grid-template-columns: 1fr; gap: 2.4rem; }
+      /* keep the "10 years" badge fully on-screen once the portrait goes full-width
+         (higher specificity so it wins over the base .portrait-badge rule defined later) */
+      .about-portrait .portrait-badge { right: 16px; bottom: 16px; width: 104px; height: 104px; }
+      .about-portrait .pb-text { font-size: 32px; }
     }
     .about-portrait { position: relative; }
     .about-frame {
@@ -1131,6 +1200,7 @@
     }
     .portrait-badge {
       position: absolute;
+      z-index: 3;
       bottom: -1.5rem; right: -1.5rem;
       width: 124px; height: 124px;
       border-radius: 50%;
@@ -1221,6 +1291,69 @@
     @media (max-width: 880px) {
       .srv-head-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     }
+    /* AI Advertising · signature highlight banner (pulled out of the grid) */
+    .ai-highlight {
+      position: relative;
+      margin-bottom: 22px;
+      padding: clamp(1.8rem, 4vw, 2.8rem);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(225,29,43,.5);
+      background:
+        radial-gradient(130% 150% at 0% 0%, rgba(225,29,43,.24), transparent 55%),
+        linear-gradient(135deg, rgba(225,29,43,.16), rgba(225,29,43,.03) 62%),
+        var(--card);
+      box-shadow: 0 0 0 1px rgba(225,29,43,.10), 0 40px 90px -42px rgba(225,29,43,.85);
+      overflow: hidden;
+    }
+    .ai-highlight::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft), var(--accent));
+    }
+    .ai-hl-inner {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; gap: clamp(1.2rem, 3vw, 2.4rem);
+      flex-wrap: wrap;
+    }
+    .ai-hl-icon {
+      flex: 0 0 auto;
+      width: 64px; height: 64px;
+      display: grid; place-items: center;
+      border-radius: 16px;
+      background: var(--accent); color: var(--paper);
+      box-shadow: 0 14px 32px -8px rgba(225,29,43,.85);
+    }
+    .ai-hl-icon svg { width: 34px; height: 34px; }
+    .ai-hl-body { flex: 1 1 340px; min-width: 0; }
+    .ai-hl-eyebrow {
+      font-family: var(--f-mono); font-size: 10px; font-weight: 700;
+      letter-spacing: .24em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 11px;
+    }
+    .ai-hl-title {
+      font-family: var(--f-display);
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1; letter-spacing: .005em; color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .ai-hl-title em { color: var(--accent); font-style: italic; }
+    .ai-hl-desc {
+      font-size: clamp(13.5px, 1.6vw, 16px); color: var(--muted);
+      line-height: 1.62; max-width: 660px;
+    }
+    .ai-hl-cta {
+      flex: 0 0 auto;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 24px; border-radius: 100px;
+      background: var(--accent); color: var(--paper);
+      font-family: var(--f-mono); font-size: 11px; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; text-decoration: none;
+      box-shadow: 0 16px 36px -10px rgba(225,29,43,.85);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .ai-hl-cta:hover { transform: translateY(-2px); box-shadow: 0 20px 44px -10px rgba(225,29,43,.95); }
+    @media (max-width: 680px) {
+      .ai-hl-cta { width: 100%; justify-content: center; }
+    }
     .srv-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1250,6 +1383,26 @@
       transition: transform .35s;
     }
     .srv-card:hover::before { transform: scaleX(1); }
+    .srv-card.featured {
+      border-color: rgba(225,29,43,.45);
+      background: linear-gradient(160deg, rgba(225,29,43,.11), rgba(225,29,43,.02) 55%), var(--card);
+      box-shadow: 0 0 0 1px rgba(225,29,43,.08), 0 24px 54px -30px rgba(225,29,43,.65);
+    }
+    .srv-card.featured::before { transform: scaleX(1); }
+    .srv-flag {
+      position: absolute;
+      top: 1.6rem; right: 1.6rem;
+      font-family: var(--f-mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--accent);
+      padding: 5px 10px;
+      border-radius: 100px;
+      box-shadow: 0 4px 14px -4px rgba(225,29,43,.8);
+    }
     .srv-no {
       font-family: var(--f-mono);
       font-size: 10.5px;
@@ -1594,7 +1747,11 @@
     I'm a <b id="roleText">Filmmaker</b> crafting cinematic stories — then scaling them
     into campaigns that reach millions, through editing, color, AI, and paid media.
   </p>
-  <div class="cta rev d3">
+  <div class="hero-ai rev d3">
+    <span class="hero-ai-tag">AI</span>
+    <p class="hero-ai-txt"><strong>AI advertisements</strong> for any brand — and even <em>music videos</em>. Indistinguishable from live action, cinema‑grade, delivered in days.</p>
+  </div>
+  <div class="cta rev d4">
     <a href="#works" class="pill solid" id="reelBtn">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       Watch Reel
@@ -1608,10 +1765,10 @@
   <div class="ticker-live"><i></i> Live</div>
   <div class="ticker-track">
     <span><b>1,000,000+ Views</b> ✦</span><span>MS Dhoni Tribute ✦</span><span>Now Streaming ✦</span>
-    <span>Meta + Google Ads ✦</span><span>AI Advertising ✦</span><span>Color Grading ✦</span>
+    <span>Meta + Google Ads ✦</span><span><b>AI Advertising</b> ✦</span><span>Color Grading ✦</span>
     <span>Cinematography ✦</span><span>Music Videos ✦</span><span>Film Direction ✦</span>
     <span><b>1,000,000+ Views</b> ✦</span><span>MS Dhoni Tribute ✦</span><span>Now Streaming ✦</span>
-    <span>Meta + Google Ads ✦</span><span>AI Advertising ✦</span><span>Color Grading ✦</span>
+    <span>Meta + Google Ads ✦</span><span><b>AI Advertising</b> ✦</span><span>Color Grading ✦</span>
     <span>Cinematography ✦</span><span>Music Videos ✦</span><span>Film Direction ✦</span>
   </div>
 </div>
@@ -1873,6 +2030,25 @@
       </p>
     </div>
 
+    <!-- AI Advertising · signature highlight -->
+    <div class="ai-highlight rev d2">
+      <div class="ai-hl-inner">
+        <div class="ai-hl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v4"/><path d="M12 18v4"/>
+            <path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/>
+            <path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="ai-hl-body">
+          <div class="ai-hl-eyebrow">★ Signature Specialty</div>
+          <h3 class="ai-hl-title">AI <em>Advertising</em></h3>
+          <p class="ai-hl-desc">AI video and ads for any brand — and even music videos. Indistinguishable from live action, cinema‑grade, delivered in days at a fraction of a full production.</p>
+        </div>
+        <a href="#contact" class="ai-hl-cta">Start an AI project ↗</a>
+      </div>
+    </div>
+
     <div class="srv-grid">
 
       <div class="srv-card rev">
@@ -1912,9 +2088,6 @@
         </svg>
         <h3 class="srv-name">Cinematography</h3>
         <p class="srv-desc">Visual storytelling behind the lens — frames composed to carry emotion and serve the story.</p>
-        <div class="srv-tags">
-          <span class="srv-tag">Sony</span><span class="srv-tag">Mirrorless</span><span class="srv-tag">Drone</span><span class="srv-tag">Gimbal</span>
-        </div>
       </div>
 
       <div class="srv-card rev d2">
@@ -1929,27 +2102,12 @@
         <h3 class="srv-name">Color Grading</h3>
         <p class="srv-desc">Cinematic color that gives every project its own signature look and mood.</p>
         <div class="srv-tags">
-          <span class="srv-tag">DaVinci Resolve</span><span class="srv-tag">LUTs</span><span class="srv-tag">HDR</span>
-        </div>
-      </div>
-
-      <div class="srv-card rev">
-        <div class="srv-no">No. 05</div>
-        <svg class="srv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v4"/><path d="M12 18v4"/>
-          <path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/>
-          <path d="M2 12h4"/><path d="M18 12h4"/>
-          <path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/>
-        </svg>
-        <h3 class="srv-name">AI Advertising</h3>
-        <p class="srv-desc">Hyper-realistic AI video and ads for any brand — film-grade visuals, a fraction of the cost.</p>
-        <div class="srv-tags">
-          <span class="srv-tag">Higgsfield</span><span class="srv-tag">Seedance</span><span class="srv-tag">Kling</span><span class="srv-tag">Runway</span>
+          <span class="srv-tag">DaVinci Resolve</span>
         </div>
       </div>
 
       <div class="srv-card rev d1">
-        <div class="srv-no">No. 06</div>
+        <div class="srv-no">No. 05</div>
         <svg class="srv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="3 17 9 11 13 15 21 7"/>
           <polyline points="14 7 21 7 21 14"/>
@@ -1957,12 +2115,12 @@
         <h3 class="srv-name">Performance Marketing</h3>
         <p class="srv-desc">Meta &amp; Google ad campaigns built to convert — from creative to targeting to scale.</p>
         <div class="srv-tags">
-          <span class="srv-tag">Meta Ads</span><span class="srv-tag">Google Ads</span><span class="srv-tag">YouTube</span><span class="srv-tag">GA4</span>
+          <span class="srv-tag">Meta Ads</span><span class="srv-tag">Google Ads</span><span class="srv-tag">YouTube</span>
         </div>
       </div>
 
       <div class="srv-card rev d2">
-        <div class="srv-no">No. 07</div>
+        <div class="srv-no">No. 06</div>
         <svg class="srv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
@@ -2196,11 +2354,14 @@
     }
   })();
 
-  /* ── CRT BOOT INTRO ── */
+  /* ── CRT BOOT INTRO (plays once per browser session) ── */
   (function(){
     const b = document.getElementById('boot');
     if (!b) return;
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { b.style.display = 'none'; return; }
+    let seen = null;
+    try { seen = sessionStorage.getItem('bootSeen'); } catch (e) {}
+    if (seen || matchMedia('(prefers-reduced-motion: reduce)').matches) { b.style.display = 'none'; return; }
+    try { sessionStorage.setItem('bootSeen', '1'); } catch (e) {}
     document.body.style.overflow = 'hidden';
     const kill = () => {
       b.classList.add('done');
@@ -2361,7 +2522,7 @@
     vTitle.textContent = title || 'Project';
     vCat.textContent   = cat   || 'Work';
     const src = ytId
-      ? `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`
+      ? `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&color=white`
       : `https://drive.google.com/file/d/${vid}/preview`;
     vPlayer.innerHTML = `<iframe src="${src}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="${title}"></iframe>`;
     vModal.classList.add('open');
@@ -2485,19 +2646,30 @@
     s.addEventListener('input', () => scrub(+s.value));
     scrub(0);
 
-    // drag frame to grade
-    let dragging = false;
+    // drag frame to grade · a clean click/tap (no drag) plays the Arietta film
+    let dragging = false, moved = false, startX = 0, startY = 0;
+    const DRAG_THRESH = 6; // px of movement before it counts as a grade-drag (vs a tap-to-play)
     const setFromX = x => {
       const r = frame.getBoundingClientRect();
       const v = Math.max(0, Math.min(100, Math.round((x - r.left) / r.width * 100)));
       g.value = v; userG = true; grade(v);
     };
-    frame.addEventListener('mousedown', e => { dragging = true; setFromX(e.clientX); });
-    addEventListener('mousemove', e => { if (dragging) setFromX(e.clientX); });
-    addEventListener('mouseup',   () => { dragging = false; });
-    frame.addEventListener('touchstart', e => { dragging = true; setFromX(e.touches[0].clientX); }, { passive: true });
-    frame.addEventListener('touchmove',  e => { if (dragging) setFromX(e.touches[0].clientX); }, { passive: true });
-    frame.addEventListener('touchend',   () => { dragging = false; });
+    const playArietta = () => { if (typeof openVideo === 'function') openVideo('', '0loeMKVqpwk', 'Arietta', 'Experimental Film', frame); };
+    frame.addEventListener('mousedown', e => { dragging = true; moved = false; startX = e.clientX; startY = e.clientY; });
+    addEventListener('mousemove', e => {
+      if (!dragging) return;
+      if (!moved && Math.hypot(e.clientX - startX, e.clientY - startY) > DRAG_THRESH) moved = true;
+      if (moved) setFromX(e.clientX);
+    });
+    addEventListener('mouseup', () => { if (dragging && !moved) playArietta(); dragging = false; });
+    frame.addEventListener('touchstart', e => { dragging = true; moved = false; startX = e.touches[0].clientX; startY = e.touches[0].clientY; }, { passive: true });
+    frame.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      const t = e.touches[0];
+      if (!moved && Math.hypot(t.clientX - startX, t.clientY - startY) > DRAG_THRESH) moved = true;
+      if (moved) setFromX(t.clientX);
+    }, { passive: true });
+    frame.addEventListener('touchend', () => { if (dragging && !moved) playArietta(); dragging = false; });
 
     // auto-tease on reveal
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
