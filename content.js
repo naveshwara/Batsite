@@ -15,9 +15,75 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt_GrlAr6Dxfkc.jpg"
   },
   {
+    "title": "Velammal Nexus — The Brand Film",
+    "drive": "",
+    "yt": "fhO-5EzZ34Q",
+    "filter": "commercial",
+    "cat": "Brand Film",
+    "chip": "Brand",
+    "big": "NEXUS",
+    "sub": "The Brand Film",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#1a0030 0%,#3d0068 45%,#1a0820 100%)",
+    "thumb": "assets/thumbs/yt_fhO-5EzZ34Q.jpg"
+  },
+  {
+    "title": "Nexus — Ad",
+    "drive": "",
+    "yt": "VU-GV6OUHf0",
+    "filter": "commercial",
+    "cat": "Commercial · Brand Spot",
+    "chip": "Featured · 4K Spot",
+    "big": "NEXUS",
+    "sub": "4K Cinematic Spot",
+    "featured": true,
+    "grad": "linear-gradient(135deg,#080814 0%,#100c20 55%,#1c142c 100%)",
+    "thumb": "assets/thumbs/yt_VU-GV6OUHf0.jpg"
+  },
+  {
+    "title": "Birthday Tribute",
+    "drive": "",
+    "yt": "ly9NF8KDSw0",
+    "filter": "cinematic",
+    "cat": "Tribute Film",
+    "chip": "Tribute",
+    "big": "BIRTHDAY",
+    "sub": "Another candle, properly lit.",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)",
+    "thumb": "assets/thumbs/yt_ly9NF8KDSw0.jpg"
+  },
+  {
+    "title": "Velammal Nexus — Ad",
+    "drive": "",
+    "yt": "_xq9mt_RV-g",
+    "filter": "commercial",
+    "cat": "Brand Film · 4K · 1 min",
+    "chip": "Featured · 4K · 1 min",
+    "big": "NEXUS",
+    "sub": "4K Brand Film",
+    "featured": true,
+    "footCat": "Brand Film · Long Form",
+    "grad": "linear-gradient(135deg,#180020 0%,#2a0040 55%,#3d1060 100%)",
+    "thumb": "assets/thumbs/yt__xq9mt_RV-g.jpg"
+  },
+  {
+    "title": "Peace Song — A Quiet Anthem",
+    "drive": "",
+    "yt": "ASyIPON4NWc",
+    "filter": "music",
+    "cat": "Music · Original Track",
+    "chip": "Music Video",
+    "big": "PEACE",
+    "sub": "An Original Song",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#1a0a08 0%,#2a1812 55%,#3a2418 100%)",
+    "thumb": "assets/thumbs/yt_ASyIPON4NWc.jpg"
+  },
+  {
     "title": "Independence Day — A Nation in Frames",
-    "drive": "1afChECBWrDekeX8ay-R1LsMdbz3x7qXC",
-    "yt": "",
+    "drive": "",
+    "yt": "zUdEsDqkr8Q",
     "filter": "music",
     "cat": "Cinematic · Patriotic Film",
     "chip": "Patriotic",
@@ -26,20 +92,33 @@ window.SITE_WORKS = [
     "featured": false,
     "footCat": "Cinematic · Patriotic",
     "grad": "linear-gradient(135deg,#3a1810 0%,#5a2010 45%,#1a0808 100%)",
-    "thumb": "assets/thumbs/dr_1afChECBWrDekeX8ay-R1LsMdbz3x7qXC.jpg"
+    "thumb": "assets/thumbs/yt_zUdEsDqkr8Q.jpg"
   },
   {
-    "title": "Peace Song — A Quiet Anthem",
-    "drive": "1c_F5eq2TOoUgn4m07Di6JjVgUgMnyL44",
-    "yt": "",
-    "filter": "music",
-    "cat": "Music · Original Track",
-    "chip": "Music Video",
-    "big": "PEACE",
-    "sub": "An Original Song",
+    "title": "The Mandate — Election Awareness",
+    "drive": "",
+    "yt": "LNM0h3loEes",
+    "filter": "commercial",
+    "cat": "Political · Campaign",
+    "chip": "Political",
+    "big": "MANDATE",
+    "sub": "Election Awareness",
     "featured": false,
-    "grad": "linear-gradient(135deg,#1a0a08 0%,#2a1812 55%,#3a2418 100%)",
-    "thumb": "assets/thumbs/dr_1c_F5eq2TOoUgn4m07Di6JjVgUgMnyL44.jpg"
+    "grad": "linear-gradient(135deg,#180a08 0%,#2a1208 55%,#3a1810 100%)",
+    "thumb": "assets/thumbs/yt_LNM0h3loEes.jpg"
+  },
+  {
+    "title": "Every Vote Counts — Campaign Film",
+    "drive": "",
+    "yt": "DlLLUybt0rs",
+    "filter": "commercial",
+    "cat": "Political · Campaign",
+    "chip": "Political",
+    "big": "VOTE",
+    "sub": "Every Vote Counts",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)",
+    "thumb": "assets/thumbs/yt_DlLLUybt0rs.jpg"
   },
   {
     "title": "Chetan Bhagat — Stories That Shaped Young Minds",
@@ -56,33 +135,6 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt_36Dbik_VC3A.jpg"
   },
   {
-    "title": "Velammal Nexus — The Brand Film",
-    "drive": "12fq7UnKFztxk4ZXY-r7njkAISXnL_fQO",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Brand Film",
-    "chip": "Brand",
-    "big": "NEXUS",
-    "sub": "The Brand Film",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#1a0030 0%,#3d0068 45%,#1a0820 100%)",
-    "thumb": "assets/thumbs/dr_12fq7UnKFztxk4ZXY-r7njkAISXnL_fQO.jpg"
-  },
-  {
-    "title": "Velammal Nexus — Full Cut",
-    "drive": "1htMaDUwvTNMvRGvzGB_JpRcwB_E8kbAk",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Brand Film · 4K · 1 min",
-    "chip": "Featured · 4K · 1 min",
-    "big": "1:00",
-    "sub": "4K Brand Film",
-    "featured": true,
-    "footCat": "Brand Film · Long Form",
-    "grad": "linear-gradient(135deg,#180020 0%,#2a0040 55%,#3d1060 100%)",
-    "thumb": "assets/thumbs/dr_1htMaDUwvTNMvRGvzGB_JpRcwB_E8kbAk.jpg"
-  },
-  {
     "title": "Ashish — Against the Sky · The Everest Summit",
     "drive": "",
     "yt": "xnTyn_zb67s",
@@ -95,45 +147,6 @@ window.SITE_WORKS = [
     "footCat": "Documentary · Velammal Nexus",
     "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)",
     "thumb": "assets/thumbs/yt_xnTyn_zb67s.jpg"
-  },
-  {
-    "title": "Arietta",
-    "drive": "",
-    "yt": "0loeMKVqpwk",
-    "filter": "cinematic",
-    "cat": "Experimental Film",
-    "chip": "Experimental",
-    "big": "ARIETTA",
-    "sub": "Experimental Film",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#0a0a18 0%,#181028 55%,#241838 100%)",
-    "thumb": "assets/thumbs/yt_0loeMKVqpwk.jpg"
-  },
-  {
-    "title": "Smoke and Mirrors",
-    "drive": "",
-    "yt": "IkalpFCCx6U",
-    "filter": "cinematic",
-    "cat": "Short Film",
-    "chip": "Short Film",
-    "big": "SMOKE",
-    "sub": "Short Film",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#0c0c10 0%,#1a1a20 55%,#26262e 100%)",
-    "thumb": "assets/thumbs/yt_IkalpFCCx6U.jpg"
-  },
-  {
-    "title": "The Fools Day Killer",
-    "drive": "",
-    "yt": "13oIIJrE-T8",
-    "filter": "cinematic",
-    "cat": "Short Film · Thriller",
-    "chip": "Thriller",
-    "big": "KILLER",
-    "sub": "Short Film · Thriller",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#180808 0%,#2a0e0e 55%,#3a1414 100%)",
-    "thumb": "assets/thumbs/yt_13oIIJrE-T8.jpg"
   },
   {
     "title": "Gukesh — The King of Chess",
@@ -178,61 +191,9 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt_xjCtuwqQRUQ.jpg"
   },
   {
-    "title": "Thirty Seconds, Told in 4K",
-    "drive": "1GrNAheRl2PIduBFFNae_KYjB3ox1muKi",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Commercial · Brand Spot",
-    "chip": "Featured · 4K Spot",
-    "big": ":30",
-    "sub": "4K Cinematic Spot",
-    "featured": true,
-    "grad": "linear-gradient(135deg,#080814 0%,#100c20 55%,#1c142c 100%)",
-    "thumb": "assets/thumbs/dr_1GrNAheRl2PIduBFFNae_KYjB3ox1muKi.jpg"
-  },
-  {
-    "title": "Twenty Seconds, Told in 4K",
-    "drive": "1juGrJQHkGThs8YLI7V7XjJsqdOZ0xhJ5",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Brand Spot",
-    "chip": "4K · :20",
-    "big": ":20",
-    "sub": "4K Brand Spot",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#0a0a18 0%,#101028 55%,#181c38 100%)",
-    "thumb": "assets/thumbs/dr_1juGrJQHkGThs8YLI7V7XjJsqdOZ0xhJ5.jpg"
-  },
-  {
-    "title": "The Mandate — Election Awareness",
-    "drive": "1PzY_zXi-v6En8CUnrgYFt_dvVI2maL0l",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Political · Campaign",
-    "chip": "Political",
-    "big": "MANDATE",
-    "sub": "Election Awareness",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#180a08 0%,#2a1208 55%,#3a1810 100%)",
-    "thumb": "assets/thumbs/dr_1PzY_zXi-v6En8CUnrgYFt_dvVI2maL0l.jpg"
-  },
-  {
-    "title": "Every Vote Counts — Campaign Film",
-    "drive": "1NhxXhxfAoTARvNsE5l8t1XE0CX5qCUKY",
-    "yt": "",
-    "filter": "commercial",
-    "cat": "Political · Campaign",
-    "chip": "Political",
-    "big": "VOTE",
-    "sub": "Every Vote Counts",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#180a10 0%,#2a1218 55%,#3a1820 100%)",
-    "thumb": "assets/thumbs/dr_1NhxXhxfAoTARvNsE5l8t1XE0CX5qCUKY.jpg"
-  },
-  {
     "title": "Margazhi Utsav — TV Spot",
-    "drive": "1YoFn04xUdwfonBliu_7TZxJRkG62Xozw",
-    "yt": "",
+    "drive": "",
+    "yt": "ufet3cBBHGc",
     "filter": "events",
     "cat": "Event · Festival",
     "chip": "Festival TV",
@@ -240,25 +201,12 @@ window.SITE_WORKS = [
     "sub": "Margazhi · A Festival",
     "featured": false,
     "grad": "linear-gradient(135deg,#180c08 0%,#2a1808 55%,#3c2010 100%)",
-    "thumb": "assets/thumbs/dr_1YoFn04xUdwfonBliu_7TZxJRkG62Xozw.jpg"
-  },
-  {
-    "title": "Birthday Tribute",
-    "drive": "1tnLwDxOg7wjp7vUmZlwCLidiR2t5leMY",
-    "yt": "",
-    "filter": "cinematic",
-    "cat": "Tribute Film",
-    "chip": "Tribute",
-    "big": "BIRTHDAY",
-    "sub": "Another candle, properly lit.",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)",
-    "thumb": "assets/thumbs/dr_1tnLwDxOg7wjp7vUmZlwCLidiR2t5leMY.jpg"
+    "thumb": "assets/thumbs/yt_ufet3cBBHGc.jpg"
   },
   {
     "title": "Adayalampattu — Campus Walkthrough",
-    "drive": "1C7C1CL2XBFc_6cnnS_wMMIXWvcF7tM83",
-    "yt": "",
+    "drive": "",
+    "yt": "lIH5bpqh8ZA",
     "filter": "events",
     "cat": "Event · Campus Film",
     "chip": "Featured · Walkthrough",
@@ -266,7 +214,46 @@ window.SITE_WORKS = [
     "sub": "Campus Walkthrough",
     "featured": true,
     "grad": "linear-gradient(135deg,#0a1208 0%,#142a18 55%,#1c3a28 100%)",
-    "thumb": "assets/thumbs/dr_1C7C1CL2XBFc_6cnnS_wMMIXWvcF7tM83.jpg"
+    "thumb": "assets/thumbs/yt_lIH5bpqh8ZA.jpg"
+  },
+  {
+    "title": "The Fools Day Killer",
+    "drive": "",
+    "yt": "13oIIJrE-T8",
+    "filter": "cinematic",
+    "cat": "Short Film · Thriller",
+    "chip": "Thriller",
+    "big": "KILLER",
+    "sub": "Short Film · Thriller",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#180808 0%,#2a0e0e 55%,#3a1414 100%)",
+    "thumb": "assets/thumbs/yt_13oIIJrE-T8.jpg"
+  },
+  {
+    "title": "Arietta",
+    "drive": "",
+    "yt": "0loeMKVqpwk",
+    "filter": "cinematic",
+    "cat": "Experimental Film",
+    "chip": "Experimental",
+    "big": "ARIETTA",
+    "sub": "Experimental Film",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#0a0a18 0%,#181028 55%,#241838 100%)",
+    "thumb": "assets/thumbs/yt_0loeMKVqpwk.jpg"
+  },
+  {
+    "title": "Smoke and Mirrors",
+    "drive": "",
+    "yt": "IkalpFCCx6U",
+    "filter": "cinematic",
+    "cat": "Short Film",
+    "chip": "Short Film",
+    "big": "SMOKE",
+    "sub": "Short Film",
+    "featured": false,
+    "grad": "linear-gradient(135deg,#0c0c10 0%,#1a1a20 55%,#26262e 100%)",
+    "thumb": "assets/thumbs/yt_IkalpFCCx6U.jpg"
   }
 ];
 window.SITE_SETTINGS = {
@@ -275,6 +262,6 @@ window.SITE_SETTINGS = {
   "phoneHref": "+918072253477",
   "whatsapp": "918072253477",
   "instagram": "https://www.instagram.com/naveshwar/",
-  "youtube": "",
+  "youtube": "https://www.youtube.com/@hashtagproductions",
   "ogImage": ""
 };

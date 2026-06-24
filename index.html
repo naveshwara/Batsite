@@ -200,7 +200,13 @@
     }
     .hud.play svg { transform: scale(1.3); }
     .hud.play .hud-tc { color: var(--accent); }
-    @media (pointer: coarse) { .hud { display: none; } }
+    @media (pointer: coarse), (hover: none) { .hud { display: none; } }
+    /* Touch devices: grow tap targets to ~44px without altering the desktop look */
+    @media (pointer: coarse) {
+      .f-tab { padding: 12px 18px; font-size: 11px; }
+      .c-link { padding: 9px 2px; }
+      .cg input[type=range] { height: 34px; }
+    }
 
     /* ═══════════════════════════════════════════
        NAV
@@ -693,10 +699,20 @@
       cursor: none;
       -webkit-appearance: none;
       appearance: none;
+      height: 24px;                 /* larger hit area; visual track drawn below */
+      background: transparent;
+      border-radius: 2px;
+      outline: none;
+    }
+    .cg input[type=range]::-webkit-slider-runnable-track {
       height: 4px;
       background: var(--card-2);
       border-radius: 2px;
-      outline: none;
+    }
+    .cg input[type=range]::-moz-range-track {
+      height: 4px;
+      background: var(--card-2);
+      border-radius: 2px;
     }
     .cg input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -707,6 +723,7 @@
       border: 3px solid var(--paper);
       box-shadow: 0 2px 8px rgba(225,29,43,.45);
       transition: transform .15s;
+      margin-top: -9px;             /* center 22px thumb on the 4px track */
     }
     .cg input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.12); }
     .cg input[type=range]::-moz-range-thumb {
