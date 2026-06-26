@@ -26,6 +26,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- warm up the YouTube/video hosts so embeds connect and play faster on click -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="dns-prefetch" href="https://googlevideo.com">
+  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
 
   <style>
     /* ═══════════════════════════════════════════
@@ -378,9 +385,9 @@
        LAYOUT
     ═══════════════════════════════════════════ */
     .wrap {
-      max-width: 1240px;
+      max-width: 1600px;
       margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 2.4rem);
+      padding: 0 clamp(1.2rem, 4vw, 3rem);
     }
     section.band {
       padding: clamp(3.5rem, 7vw, 6rem) 0;
@@ -1039,7 +1046,52 @@
       transition: opacity .35s;
     }
     .vmodal.open { opacity: 1; pointer-events: auto; }
+    /* blurred depth-of-field collage of the other work thumbnails — fills the
+       space around the player so there are no black bars while a video plays */
+    .vmodal { cursor: default; }            /* restore a visible cursor inside the modal */
+    .vmodal-close { cursor: pointer; }
+    body.vopen #hud { display: none; }       /* hide the camera-HUD cursor over the modal */
+    .vmodal-bg {
+      position: absolute; inset: 0;
+      z-index: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(clamp(190px, 21vw, 350px), 1fr));
+      gap: 20px;
+      padding: 20px;
+      align-content: center; justify-content: center;
+      opacity: 0;
+      transition: opacity .6s ease;
+      overflow: hidden;
+    }
+    .vmodal.open .vmodal-bg { opacity: 1; }
+    .vmodal-bg button {
+      position: relative;
+      border: 0; margin: 0; padding: 0;
+      background-color: #111; background-size: cover; background-position: center;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      filter: blur(8px) brightness(.5) saturate(1.2);
+      transition: filter .35s ease, scale .35s ease, box-shadow .35s ease;
+      cursor: pointer;
+      animation: vfloat 7s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes vfloat {
+      0%, 100% { translate: 0 0; }
+      50%      { translate: 0 -20px; }
+    }
+    .vmodal-bg button:hover,
+    .vmodal-bg button:focus-visible {
+      filter: blur(0) brightness(1);
+      scale: 1.09;
+      z-index: 3;
+      box-shadow: 0 24px 55px rgba(0,0,0,.7), 0 0 0 2px var(--accent);
+      outline: none;
+      animation-play-state: paused;
+    }
+    @media (prefers-reduced-motion: reduce) { .vmodal-bg button { animation: none; } }
     .vmodal-inner {
+      position: relative; z-index: 1;
       width: 100%; max-width: 1200px;
       transform: scale(.94) translateY(20px);
       opacity: 0;
@@ -1090,7 +1142,7 @@
     .vmodal-player {
       position: relative;
       width: 100%; aspect-ratio: 16/9;
-      background: #000;
+      background: #000 center / cover no-repeat;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: 0 30px 80px rgba(0,0,0,.6);
@@ -1106,9 +1158,9 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 15%;
+      height: max(84px, 19%);
       z-index: 2;
-      background: linear-gradient(to bottom, rgba(8,8,11,.98) 0%, rgba(8,8,11,.6) 42%, rgba(8,8,11,0) 100%);
+      background: linear-gradient(to bottom, rgba(8,8,11,1) 0%, rgba(8,8,11,1) 74%, rgba(8,8,11,0) 100%);
     }
     .vmodal-hint {
       text-align: center;
@@ -1723,6 +1775,7 @@
 
 <!-- ══════════════ VIDEO MODAL ══════════════ -->
 <div class="vmodal" id="vModal" role="dialog" aria-modal="true" aria-labelledby="vmTitle" aria-hidden="true">
+  <div class="vmodal-bg" id="vmBg" aria-hidden="true"></div>
   <div class="vmodal-inner">
     <div class="vmodal-head">
       <div class="vmodal-meta">
@@ -1734,7 +1787,7 @@
       </button>
     </div>
     <div class="vmodal-player" id="vmPlayer"></div>
-    <p class="vmodal-hint">Press <kbd>ESC</kbd> to close · Click outside player to dismiss</p>
+    <p class="vmodal-hint">Press <kbd>ESC</kbd> to close · Click any video in the background to play it</p>
   </div>
 </div>
 
@@ -2075,7 +2128,7 @@
         <h3 class="srv-name">Video Editing</h3>
         <p class="srv-desc">Precision narrative editing that turns raw footage into films, reels, and spots that hold attention.</p>
         <div class="srv-tags">
-          <span class="srv-tag">Premiere</span><span class="srv-tag">DaVinci</span><span class="srv-tag">After Effects</span>
+          <span class="srv-tag">Premiere</span><span class="srv-tag">Final Cut Pro</span><span class="srv-tag">DaVinci</span><span class="srv-tag">After Effects</span>
         </div>
       </div>
 
@@ -2511,7 +2564,27 @@
   const vTitle  = document.getElementById('vmTitle');
   const vCat    = document.getElementById('vmCat');
   const vClose  = document.getElementById('vmClose');
+  const vmBg    = document.getElementById('vmBg');
   let lastFocused = null;
+
+  // fill the modal background with a blurred depth-of-field collage of the OTHER
+  // work thumbnails, so the player floats on the body of work (no black bars)
+  function paintBackdrop(currentYt, currentVid) {
+    if (!vmBg) return;
+    const esc = s => String(s == null ? '' : s).replace(/"/g, '&quot;').replace(/'/g, "\\'");
+    const works = window.SITE_WORKS || [];
+    const others = works.filter(w => w.thumb && !((currentYt && w.yt === currentYt) || (currentVid && w.drive === currentVid)));
+    const pool = others.length ? others : works.filter(w => w.thumb);
+    if (!pool.length) { vmBg.innerHTML = ''; return; }
+    let tiles = '';
+    for (let i = 0; i < 24; i++) {
+      const w = pool[i % pool.length];
+      const delay = (-(i % 7) * 1.1).toFixed(2);
+      const dur = (6 + (i % 5) * 0.9).toFixed(2);
+      tiles += `<button type="button" style="background-image:url('${w.thumb}'); animation-delay:${delay}s; animation-duration:${dur}s" data-yt="${esc(w.yt)}" data-vid="${esc(w.drive)}" data-title="${esc(w.title)}" data-cat="${esc(w.cat)}" aria-label="Play ${esc(w.title)}" title="${esc(w.title)}"></button>`;
+    }
+    vmBg.innerHTML = tiles;
+  }
 
   function openVideo(vid, ytId, title, cat, trigger) {
     if (!vid && !ytId) {
@@ -2521,20 +2594,24 @@
     lastFocused = trigger || document.activeElement;
     vTitle.textContent = title || 'Project';
     vCat.textContent   = cat   || 'Work';
+    paintBackdrop(ytId || '', vid || '');
     const src = ytId
       ? `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&color=white`
       : `https://drive.google.com/file/d/${vid}/preview`;
-    vPlayer.innerHTML = `<iframe src="${src}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="${title}"></iframe>`;
+    vPlayer.style.backgroundImage = ytId ? `url('assets/thumbs/yt_${ytId}.jpg')` : '';
+    vPlayer.innerHTML = `<iframe src="${src}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="${title}"></iframe>`;
     vModal.classList.add('open');
     vModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('vopen');
     setTimeout(() => vClose.focus(), 300);
   }
   function closeVideo() {
     vModal.classList.remove('open');
     vModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    setTimeout(() => { vPlayer.innerHTML = ''; }, 350);
+    document.body.classList.remove('vopen');
+    setTimeout(() => { vPlayer.innerHTML = ''; vPlayer.style.backgroundImage = ''; if (vmBg) vmBg.innerHTML = ''; }, 350);
     if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
   }
   items.forEach(item => {
@@ -2543,6 +2620,11 @@
     });
   });
   vClose.addEventListener('click', closeVideo);
+  if (vmBg) vmBg.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-yt], button[data-vid]');
+    if (btn) { openVideo(btn.dataset.vid, btn.dataset.yt, btn.dataset.title, btn.dataset.cat, btn); }
+    else if (e.target === vmBg) { closeVideo(); }
+  });
   vModal.addEventListener('click', e => { if (e.target === vModal) closeVideo(); });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && vModal.classList.contains('open')) closeVideo();
