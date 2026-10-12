@@ -854,6 +854,7 @@
     .works-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: dense;
       gap: 18px;
     }
     @media (max-width: 1024px) {
@@ -1926,7 +1927,30 @@
   @keyframes plCaret { 50% { opacity:0; } }
   @media (max-width:760px){ .pl-strip{flex-wrap:wrap; gap:26px; justify-content:center;} .pl-step{width:42%;} .pl-conn{display:none;} }
   @media (prefers-reduced-motion: reduce){ .cam-reel,.clap-top,.mon-play,.rkt,.rkt-ember,.pen-caret,.pl-conn::after{animation:none!important;} }
-</style>
+
+    /* Shorts card — true vertical 9:16, pinned to the side column */
+    .w-card.short { grid-row: span 2; grid-column: 3; }
+    .w-card.short .w-chip {
+      background: var(--accent); color: var(--paper);
+      padding: 3px 8px; border-radius: 4px; letter-spacing: .18em;
+    }
+    .w-card.short .w-thumb { aspect-ratio: 9/16; }
+    .w-card.short .w-thumb::before {
+      content: '9:16'; position: absolute; top: 14px; right: 14px; z-index: 6;
+      font-family: var(--f-mono); font-size: 8.5px; font-weight: 700;
+      letter-spacing: .18em; color: var(--accent); padding: 3px 7px;
+      background: rgba(0,0,0,.7); border: 1px solid rgba(225,29,43,.5); border-radius: 3px;
+    }
+    .w-card.short .w-thumb::after {
+      content: ''; position: absolute; top: 22px; left: 50%;
+      transform: translateX(-50%); width: 52px; height: 4px;
+      background: rgba(255,255,255,.14); border-radius: 3px; z-index: 5; pointer-events: none;
+    }
+    .w-card.short .w-big { font-size: clamp(34px, 4vw, 56px); }
+    .w-card.short .w-sub { letter-spacing: .3em; }
+    @media (max-width: 1024px) { .w-card.short { grid-column: 2; } }
+    @media (max-width: 580px)  { .w-card.short { grid-row: span 1; grid-column: auto; } }
+  </style>
 <section id="pipeline" class="band">
   <div class="wrap">
     <div class="chap rev"><span class="n">·</span><span class="ln"></span><span class="l">The Pipeline</span></div>
@@ -2395,7 +2419,7 @@
   </div>
 </footer>
 
-<script src="content.js"></script>
+<script>document.write('<script src="content.js?v='+Date.now()+'"><\/script>')</script>
 <script>
   /* ── RENDER WORKS from content.js (window.SITE_WORKS) ── */
   (function renderWorks(){
@@ -2406,6 +2430,7 @@
     const delays = ['', ' d1', ' d2'];
     grid.innerHTML = works.map((w, i) => {
       const wide   = w.featured ? ' wide' : '';
+      const short  = w.short ? ' short' : '';
       const del    = delays[i % 3];
       const chroma = w.featured ? ' chroma' : '';
       const vid    = w.drive ? esc(w.drive) : '';
@@ -2431,7 +2456,7 @@
         ? `<img class="w-photo" src="${thumb}" alt="${title}" loading="lazy" decoding="async" referrerpolicy="no-referrer"${onerr} onload="this.closest('.w-card').classList.add('has-photo')"><div class="w-scrim"></div>`
         : '';
       return `
-        <div class="w-card${wide} rev${del}" data-c="${esc(w.filter || 'all')}" data-vid="${vid}" data-yt="${yt}" data-title="${title}" data-cat="${cat}" tabindex="0" role="button" aria-label="${title}. Click to play.">
+        <div class="w-card${wide}${short} rev${del}" data-c="${esc(w.filter || 'all')}" data-vid="${vid}" data-yt="${yt}" data-title="${title}" data-cat="${cat}" tabindex="0" role="button" aria-label="${title}. Click to play.">
           <div class="w-chrome">
             <div class="w-dots"><i></i><i></i><i></i></div>
             <span class="w-chip">${chip}</span>

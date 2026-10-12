@@ -16,6 +16,21 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt_GrlAr6Dxfkc.jpg"
   },
   {
+    "title": "Velammal Stadium — MS Dhoni Inauguration Film",
+    "role": "DP · Edit · Color",
+    "drive": "",
+    "yt": "sinx1zADtXM",
+    "filter": "music",
+    "cat": "Event Coverage · Cricket",
+    "chip": "Full Film · Dhoni Live",
+    "big": "STADIUM",
+    "sub": "MS Dhoni · Madurai",
+    "featured": false,
+    "footCat": "Event Film · Velammal Nexus",
+    "grad": "linear-gradient(135deg,#2a0808 0%,#5a1010 45%,#180404 100%)",
+    "thumb": "assets/thumbs/yt_sinx1zADtXM.jpg"
+  },
+  {
     "title": "Velammal Nexus — The Brand Film",
     "role": "DP · Edit · Color",
     "drive": "",
@@ -28,6 +43,38 @@ window.SITE_WORKS = [
     "featured": false,
     "grad": "linear-gradient(135deg,#1a0030 0%,#3d0068 45%,#1a0820 100%)",
     "thumb": "assets/thumbs/yt_fhO-5EzZ34Q.jpg"
+  },
+  {
+    "title": "MS Dhoni — Velammal Cricket Stadium",
+    "role": "DP · Edit",
+    "drive": "",
+    "yt": "NUrEzT3agWQ",
+    "filter": "music",
+    "cat": "Event Film · Vertical",
+    "chip": "Dhoni · 9:16",
+    "big": "DHONI",
+    "sub": "Velammal Cricket Stadium",
+    "featured": false,
+    "footCat": "Event Film · Velammal Nexus",
+    "grad": "linear-gradient(135deg,#2a0808 0%,#5a1010 45%,#1a0404 100%)",
+    "short": true,
+    "thumb": "assets/thumbs/yt_NUrEzT3agWQ.jpg"
+  },
+  {
+    "title": "Manu Bhaker — Steady Hands, Olympic Glory",
+    "role": "Edit · Color",
+    "drive": "",
+    "yt": "0L_Wi2LUEkU",
+    "filter": "cinematic",
+    "cat": "Sports AV · YouTube Shorts",
+    "chip": "Short · #Shorts",
+    "big": "MANU",
+    "sub": "Bhaker · Olympian",
+    "featured": false,
+    "short": true,
+    "footCat": "Shorts · Velammal Nexus",
+    "grad": "linear-gradient(135deg,#0a1420 0%,#152838 55%,#1c3a48 100%)",
+    "thumb": "assets/thumbs/yt_0L_Wi2LUEkU.jpg"
   },
   {
     "title": "Nexus — Ad",
@@ -73,6 +120,21 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt__xq9mt_RV-g.jpg"
   },
   {
+    "title": "Krishna Jayanti — A Celebration Film",
+    "role": "DP · Edit · Color",
+    "drive": "",
+    "yt": "MBC-Ub7HYTw",
+    "filter": "events",
+    "cat": "Cultural · Festival Film",
+    "chip": "Festival",
+    "big": "KRISHNA",
+    "sub": "Jayanti · A Celebration",
+    "featured": false,
+    "footCat": "Cultural · Velammal Nexus",
+    "grad": "linear-gradient(135deg,#0a1230 0%,#152048 55%,#2a1a10 100%)",
+    "thumb": "assets/thumbs/yt_MBC-Ub7HYTw.jpg"
+  },
+  {
     "title": "Peace Song — A Quiet Anthem",
     "role": "DP · Edit · Color",
     "drive": "",
@@ -100,20 +162,6 @@ window.SITE_WORKS = [
     "footCat": "Cinematic · Patriotic",
     "grad": "linear-gradient(135deg,#3a1810 0%,#5a2010 45%,#1a0808 100%)",
     "thumb": "assets/thumbs/yt_zUdEsDqkr8Q.jpg"
-  },
-  {
-    "title": "The Mandate — Election Awareness",
-    "role": "Direction · Edit",
-    "drive": "",
-    "yt": "LNM0h3loEes",
-    "filter": "commercial",
-    "cat": "Political · Campaign",
-    "chip": "Political",
-    "big": "MANDATE",
-    "sub": "Election Awareness",
-    "featured": false,
-    "grad": "linear-gradient(135deg,#180a08 0%,#2a1208 55%,#3a1810 100%)",
-    "thumb": "assets/thumbs/yt_LNM0h3loEes.jpg"
   },
   {
     "title": "Every Vote Counts — Campaign Film",
