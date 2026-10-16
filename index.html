@@ -1950,6 +1950,126 @@
     .w-card.short .w-sub { letter-spacing: .3em; }
     @media (max-width: 1024px) { .w-card.short { grid-column: 2; } }
     @media (max-width: 580px)  { .w-card.short { grid-row: span 1; grid-column: auto; } }
+  
+    /* ══════════════════════════════════════════════════
+       MOBILE OPTIMISATION — 2-up grids, tighter chrome,
+       44px tap targets. Halves the scroll depth on phones.
+       ══════════════════════════════════════════════════ */
+
+    /* --- primary nav control: real 44px tap target --- */
+    @media (max-width: 880px) {
+      .hamburger {
+        width: 44px; height: 44px;
+        padding: 0;
+        align-items: center; justify-content: center;
+        margin-right: -10px;              /* keep optical alignment to the edge */
+      }
+      .logo { padding: 10px 0; }           /* taller hit area, same look */
+    }
+
+    @media (max-width: 620px) {
+      /* --- WORKS: 2-up instead of 1-up. 9000px -> ~4800px --- */
+      .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .w-card.wide  { grid-column: span 2; }
+      .w-card.short { grid-column: auto; grid-row: span 2; }
+
+      /* compact the card chrome so the thumbnail keeps the space */
+      .w-chrome { padding: 7px 9px; }
+      .w-dots   { display: none; }
+      .w-chip   { font-size: 8px; letter-spacing: .1em; padding: 2px 5px; }
+      .w-foot   { padding: 9px 10px 11px; gap: 8px; }
+      .w-cat    { font-size: 8px; letter-spacing: .12em; margin-bottom: 4px; }
+      .w-title  { font-size: 12.5px; line-height: 1.22; }
+      .w-arr    { width: 27px; height: 27px; font-size: 13px; flex-shrink: 0; }
+      .w-big    { font-size: clamp(20px, 6.5vw, 34px); letter-spacing: .03em; }
+      .w-sub    { font-size: 7.5px; letter-spacing: .14em; margin-top: 4px; }
+      .w-strip  { height: 9px; }
+
+      /* featured cards span both columns, so they can breathe */
+      .w-card.wide .w-title { font-size: 15px; }
+      .w-card.wide .w-big   { font-size: clamp(30px, 10vw, 52px); }
+      .w-card.wide .w-chip  { font-size: 9px; }
+
+      /* viewfinder brackets scale down with the card */
+      .w-vf { inset: 8px; }
+      .w-vf .c { width: 13px; height: 13px; }
+
+      /* --- CRAFT: 2-up instead of stacked --- */
+      .srv-grid { gap: 10px; }
+      .srv-grid > .srv-card { flex-basis: calc((100% - 10px) / 2); }
+      .srv-card { padding: 1.1rem .95rem 1.25rem; }
+      .srv-no   { font-size: 9px; margin-bottom: .7rem; }
+      .srv-icon { width: 26px; height: 26px; margin-bottom: .6rem; }
+      .srv-name { font-size: 17px; margin-bottom: .35rem; }
+      .srv-desc { font-size: 12px; line-height: 1.55; margin-bottom: .7rem; }
+      .srv-tag  { font-size: 8.5px; padding: 3px 7px; }
+
+      /* --- PROCESS: 2-up --- */
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .p-step { padding: 1.1rem .95rem 1.25rem; }
+      .p-num  { font-size: 34px; margin-bottom: .6rem; }
+      .p-name { font-size: 15px; margin-bottom: .35rem; }
+      .p-desc { font-size: 12px; line-height: 1.55; }
+
+      /* --- section rhythm: less dead space between blocks --- */
+      section.band { padding: clamp(2.2rem, 7vw, 3.2rem) 0; }
+      .s-display   { margin-bottom: 1rem; }
+      .chap        { margin-bottom: 1rem; }
+    }
+
+    /* very narrow phones: keep 2-up but shave the gutters */
+    @media (max-width: 400px) {
+      .works-grid { gap: 8px; }
+      .w-title { font-size: 11.5px; }
+      .srv-grid { gap: 8px; }
+      .process-steps { gap: 8px; }
+    }
+
+    /* --- touch: every control reaches 44px --- */
+    @media (pointer: coarse) {
+      .f-tab        { min-height: 44px; display: inline-flex; align-items: center; }
+      .c-link       { min-height: 44px; display: inline-flex; align-items: center; }
+      .vmodal-close { width: 48px; height: 48px; }
+      .w-card       { -webkit-tap-highlight-color: rgba(225,29,43,.18); }
+      /* hover-only affordances are always-on where there is no hover */
+      .w-vf         { opacity: .55; }
+      .w-arr        { background: rgba(225,29,43,.14); border-color: rgba(225,29,43,.4); }
+    }
+  
+    /* --- remaining touch targets: sliders + footer socials --- */
+    @media (pointer: coarse) {
+      /* range inputs: tall invisible track so the thumb is easy to grab */
+      .cg input[type=range] {
+        height: 44px;
+        background: transparent;
+        -webkit-appearance: none; appearance: none;
+      }
+      .cg input[type=range]::-webkit-slider-runnable-track {
+        height: 4px; border-radius: 2px; background: var(--card-2);
+      }
+      .cg input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 26px; height: 26px; border-radius: 50%;
+        background: var(--accent); border: 3px solid var(--paper);
+        margin-top: -11px;                       /* centre on the 4px track */
+        box-shadow: 0 2px 10px rgba(225,29,43,.5);
+      }
+      .cg input[type=range]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--card-2); }
+      .cg input[type=range]::-moz-range-thumb {
+        width: 26px; height: 26px; border-radius: 50%;
+        background: var(--accent); border: 3px solid var(--paper);
+      }
+
+      /* footer social icons: 17px glyph, 44px hit area */
+      .f-socials { gap: 4px; }
+      .f-socials a {
+        width: 44px; height: 44px;
+        display: inline-flex; align-items: center; justify-content: center;
+      }
+    }
   </style>
 <section id="pipeline" class="band">
   <div class="wrap">
