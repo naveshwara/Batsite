@@ -84,20 +84,7 @@
       "grad": "linear-gradient(135deg,#080814 0%,#100c20 55%,#1c142c 100%)"
     },
     {
-      "title": "Birthday Tribute",
-      "role": "Edit · Color",
-      "drive": "",
-      "yt": "ly9NF8KDSw0",
-      "filter": "cinematic",
-      "cat": "Tribute Film",
-      "chip": "Tribute",
-      "big": "BIRTHDAY",
-      "sub": "Another candle, properly lit.",
-      "featured": false,
-      "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)"
-    },
-    {
-      "title": "Many Happy Returns — A Chairman's Tribute",
+      "title": "A Birthday Film for the Chairman",
       "role": "DP · Edit · Color",
       "drive": "",
       "yt": "c6Eeha0P2m0",
@@ -109,6 +96,19 @@
       "featured": false,
       "footCat": "Tribute Film · Velammal Nexus",
       "grad": "linear-gradient(135deg,#180c18 0%,#2a1428 55%,#3a1c34 100%)"
+    },
+    {
+      "title": "Birthday Tribute",
+      "role": "Edit · Color",
+      "drive": "",
+      "yt": "ly9NF8KDSw0",
+      "filter": "cinematic",
+      "cat": "Tribute Film",
+      "chip": "Tribute",
+      "big": "BIRTHDAY",
+      "sub": "Another candle, properly lit.",
+      "featured": false,
+      "grad": "linear-gradient(135deg,#0c0818 0%,#181028 55%,#241838 100%)"
     },
     {
       "title": "Velammal Nexus — Ad",
