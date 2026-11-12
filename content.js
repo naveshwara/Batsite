@@ -91,7 +91,7 @@ window.SITE_WORKS = [
     "thumb": "assets/thumbs/yt_VU-GV6OUHf0.jpg"
   },
   {
-    "title": "A Birthday Film for the Chairman",
+    "title": "A Birthday Wish",
     "role": "DP · Edit · Color",
     "drive": "",
     "yt": "c6Eeha0P2m0",
